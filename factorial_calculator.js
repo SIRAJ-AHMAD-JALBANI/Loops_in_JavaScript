@@ -1,13 +1,11 @@
-const num = 5;
-function factorialCalculator(number){
-  let result = 1;
-  while(number > 0){
-     result = result * number;
-     number --;
+function mutation(arr) {
+  let word1 = arr[0].toLowerCase();
+  let word2 = arr[1].toLowerCase();
+
+  for (let char of word2) {
+    if (!word1.includes(char)) {
+      return false; // as soon as one letter is missing → false
+    }
   }
-return result;
+  return true; // all letters were found → true
 }
-const factorial = factorialCalculator(num);
-  const resultMsg = `Factorial of ${num} is ${factorial}`
-  console.log(resultMsg)
-  
